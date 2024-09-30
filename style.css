@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Nunito-Medium;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  user-select: none;
+  font-family: Nunito-Medium;
+  background-color: rgba(0, 0, 0, 0.938);
+  filter: hue-rotate(1000deg);
+}
+@font-face {
+  font-family: Nunito-Medium;
+  src: url(Nunito-Medium.otf);
+}
+button {
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+input {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
+:root {
+  --bg: #f4f0ec;
+  --color1: #c9316f;
+}
+
+.phone {
+  background-color: var(--bg);
+  border-radius: 20px;
+  width: 330px;
+  height: 600px;
+  overflow: hidden;
+}
+
+/* Top Bar */
+.topBar {
+  background-color: var(--color1);
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.7rem;
+}
+
+/* Messages Area */
+.messagesArea {
+  height: 80%;
+  padding-top: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  overflow: hidden;
+  gap: 10px;
+}
+.Message {
+  background-color: var(--color1);
+  border-radius: 10px;
+  color: white;
+  width: calc(100% - 30px);
+  padding: 5px 10px;
+  font-size: 1rem;
+  position: relative;
+}
+.Message::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--color1);
+}
+.receiveMessage {
+  background-color: #691738;
+  border-radius: 10px;
+  color: white;
+  width: calc(100% - 30px);
+  padding: 5px 10px;
+  font-size: 1rem;
+  right: 20px;
+  position: relative;
+}
+.receiveMessage::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #691738;
+}
+
+/* Texting Area */
+.textingArea {
+  background-color: var(--bg);
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-inline: 10px;
+}
+.textingArea button {
+  background-color: var(--color1);
+  color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.textingArea input {
+  background-color: white;
+  border-radius: 100px;
+  width: 80%;
+  padding: 8px 13px;
+}
+.btns {
+  display: flex;
+  gap: 5px;
+}
